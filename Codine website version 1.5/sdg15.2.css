@@ -56,14 +56,14 @@ li a:hover:not(.active){ /* setting the background color */
   width:100%;
   height:100%;
   font-size:50px;
-background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
+  background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
   animation:fadein 10s; /*takes 10 seconds to fully fade in */
   font-family: 'Dosis', sans-serif;
   text-align:center;
 }
 
 /* top left - one of four sections i use to position stuff in my website */
-.tl {
+  .tl {
   width:50%;
   height:50%;
   position:absolute;
@@ -84,7 +84,7 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
 }
 
  /* top right */
-.tr {
+  .tr {
   width:50%;
   height:50%;
   position:absolute;
@@ -97,7 +97,7 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
 }
 
  /* when hovered*/
-.tr:hover:not(.active) {
+  .tr:hover:not(.active) {
   opacity:1;
   transition: 2.3s;
   transform:scale(1.03);
@@ -105,7 +105,7 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
 
 
 
-.carousel-container { /* countainer for my image carousel */
+  .carousel-container { /* countainer for my image carousel */
   width:50%;
   height:50%;
   left:0;
@@ -114,13 +114,13 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
   overflow:hidden;
 }
 
-.carousel-slide{ /*  image slideshow */
+  .carousel-slide { /*  image slideshow */
   display:flex;
   width:50%;
   height:100%;
 }
 
-#prevBtn{ /*previous button for slideshow */
+#prevBtn { /*previous button for slideshow */
   top:50%;
   left:0;
   z-index:20;
@@ -131,7 +131,7 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
   opacity:0.8;
 }
 
-#nextBtn{ /* next button for slideshow*/
+  #nextBtn { /* next button for slideshow*/
   top:50%;
   right:0;
   z-index:20;
@@ -144,85 +144,82 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
 
 
 
-  /* The flip card container */
-  .flip-card {
-    background-color: transparent;
-    width: 50%;
-    height: 50%;
-    top:150%;
-    right:0;
-    position:absolute;
-    perspective: 1000px; /*  3D effect */
-    font-family: 'Dosis', sans-serif;
-
-  }
+ /* The flip card container */
+   .flip-card {
+   background-color: transparent;
+   width: 50%;
+   height: 50%;
+   top:150%;
+   right:0;
+   position:absolute;
+   perspective: 1000px; /*  3D effect */
+   font-family: 'Dosis', sans-serif;
+}
 
   /*positioning the front and back side */
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-  }
+   .flip-card-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: transform 0.8s;
+   transform-style: preserve-3d;
+}
 
   /* Do an horizontal flip when hovered*/
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    transition:2s;
-  }
+   .flip-card:hover .flip-card-inner {
+   transform: rotateY(180deg);
+   transition:2s;
+}
 
   /* front and back side */
-  .flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden; /* Safari */
-    backface-visibility: hidden;
-    font-size:60px;
-
-  }
+   .flip-card-front, .flip-card-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   font-size:60px;
+}
 
   /* Styling for front */
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
+   .flip-card-front {
+   background-color: #bbb;
+   color: black;
+}
 
   /*  back side */
-  .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
-    font-size:27px;
-    transform: rotateY(180deg);
-  }
+   .flip-card-back {
+   background-color: dodgerblue;
+   color: white;
+   font-size:27px;
+   transform: rotateY(180deg);
+}
 
 /* chart.js */
 
-.chart-container {
-  width:50%;
-  height:50%;
-  position:absolute;
-  right:0;
-  top:100%;
-  opacity: 0.9;
-  overflow:hidden;
-  background:yellow;
-  background:#ccffcc;
+   .chart-container {
+   width:50%;
+   height:50%;
+   position:absolute;
+   right:0;
+   top:100%;
+   opacity: 0.9;
+   overflow:hidden;
+   background:yellow;
+   background:#ccffcc;
 }
 
 
-.chart-container:hover {
-  opacity:1;
-  transition:1s;
+   .chart-container:hover {
+   opacity:1;
+   transition:1s;
 }
 
 
 
 
 
-.goal15{ /* button div at the bottom of the page */
+  .goal15{ /* button div at the bottom of the page */
   width:100%;
   height:50%;
   top:200%;
@@ -237,6 +234,6 @@ background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
   text-align:center;
 }
 
-.goal15:hover{ /* when hovered over */
+  .goal15:hover{ /* when hovered over */
   opacity:1;
 }
