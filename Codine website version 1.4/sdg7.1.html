@@ -1,0 +1,143 @@
+<html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script>
+
+<head>
+<title> Welcome </title>
+<link href="https://fonts.googleapis.com/css?family=Dosis|Heebo&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="sdg7.1.css">
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+<ul>
+  <li><a href="#page2">Home</a></li>
+  	 <li><a href="#news">A Comparison</a></li>
+  		<li><a href="#contact">SDG 15</a></li>
+  	<li><a href="#about">The UN SDGs</a></li>
+</ul>
+
+
+
+<div>
+ <div id="title">
+    <br> <br> <br> <br> <br>Sdg 7 <br> Sustainable Energy Sources
+     </div>
+      </div>
+
+
+
+
+
+
+ <div>
+
+<div class = "tl" onclick="window.location='file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.4/sdg7.1.html';">
+
+  <iframe width="716px" height="390px" src="https://www.youtube.com/embed/PY5yWjID1m8">
+  </iframe>
+</div>
+
+
+
+<div class="flip-card">
+<div class="flip-card-inner">
+<div class="flip-card-front">
+  <br>
+  <br>
+Goal 7 & Goal 15
+  </div>
+
+  <div class="flip-card-back">
+    north america
+</div>
+</div>
+
+</div>
+
+
+
+  <div class="chart-container">
+      <canvas id="myChart"></canvas>
+  </div>
+</div>
+
+<div class ="br">
+  as you can see. north america ha s a lot of work too do.
+</div>
+
+<div class ="bl">
+</div>
+
+
+<div class = "goal15">
+</div>
+
+
+
+<script> //-------------------------------------------------------------------------------->
+    var ctx = document.getElementById('myChart');
+
+    var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+              labels: ['Africa', 'North America', 'Asia', 'Oceania', 'Europe', 'South America'],
+              datasets: [{
+              label: '% of Renewable Energy Sources Contribution to Energy Used(2016)',
+
+              data: [55.63, 11, 16.26, 13.77, 13.52, 33.66],
+
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',   // 1st bar
+                  'rgba(54, 162, 235, 0.2)',   // 2nd bar
+                  'rgba(255, 206, 86, 0.2)',   // 3rd bar
+                  'rgba(75, 192, 192, 0.2)',   // 4th bar
+                  'rgba(153, 102, 255, 0.2)',  // 5th bar
+                  'rgba(255, 159, 64, 0.2)'    // 6th bar
+              ],
+
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+
+              borderWidth: 1
+              }]
+          },
+
+          options: {
+          scales: {
+            yAxes: [{
+                display: true,
+                          ticks: {
+                              beginAtZero: true,
+                              steps: 10,
+                              stepValue: 5,
+                              max: 100
+                }
+            }]
+          }
+
+
+        }
+    });
+
+</script>
+</body>
+</html>

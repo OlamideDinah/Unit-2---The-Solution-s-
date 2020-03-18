@@ -1,0 +1,139 @@
+body {
+  background:black;
+  margin:0;
+
+}
+ /*navbar */
+ul {
+  list-style-type: none;  /*No dots */
+  margin: 0; /* Right at the top */
+  padding: 0; /*no padding(no margin) */
+  overflow: hidden; /* if it goes off the page it wont show */
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* the colour when not hoveered on */
+  opacity:1;
+  position:sticky; /*It will always stay on top even when scrolling through the site */
+  top: 0; /* Right at the top */
+  z-index:2; /* Makes it appear infront of other elements */
+  border-radius:30px; /* Circular Navbar */
+  opacity:1;
+  font-family: 'Dosis', sans-serif;
+}
+
+li {
+  float:left; /* The navbar will "float" from the left meaning it stars from the left*/
+}
+
+li a { /* this represents all the text positioning inside of the navbars*/
+  display: block; /* its a square/rectangle */
+  color:black; /* the text is white*/
+  text-align: center; /* the text is aligned in the center */
+  padding: 14px 90px; /* the space around the text - see css block model for reference*/
+  text-decoration: none; /* no dots before text */
+  top:0;
+}
+
+li a:hover:not(.active){
+  background: linear-gradient(to right, #0575e6, #021b79); /* setting the background color */
+  transition:1s;/* setting the timing for the background to change */
+
+}
+
+.right {
+  float:right; /* anything with this class will float on the right side of the navbar */
+}
+
+.parallax {
+/* The image used */
+background-image:url('comparison.jpg');
+height: 100%; /*1 whole page */
+
+
+background-attachment: fixed; /* its fixed */
+background-position: center; /* its centered*/
+background-repeat: no-repeat; /* it won't repeat*/
+background-size: cover; /* it fully covers the page */
+text-align:center; /* all text is in the center*/
+font-family: 'Dosis', sans-serif; /* Using the font I added in the html head */
+
+}
+
+
+@keyframes title { /*css3 animation - its name it 'title' */
+  from {left :0%;}
+  to {left:45%;}
+}
+
+.textholder {
+  height:50px;
+  top:50%; /* distance from top*/
+  margin:auto; /*margins */
+  animation:title 3s; /*specifying the time it will take for the 'title' animation to happen */
+  border-radius:5%; /* curving the edges */
+  font-family: 'Dosis', sans-serif; /* specifying the font */
+  font-size:40px; /* the font size */
+  animation-fill-mode:forwards; /* the animation fills in forwards */
+  position:absolute; /*positioned exactly as I specify */
+  border-color:black; /* border color */
+  border-style:inset; /* border style */
+
+}
+#myDIV {
+  width: 100%;
+  height:100%;
+  text-align: center; /*all text is centered */
+  background-color: lightblue; /*background color */
+  display:none; /* not shown at the start */
+}
+
+#fact1, #fact4, #fact5 {
+  width: 100%;
+  height:15%;
+  padding: 5px 0;
+  text-align: center;
+  background: linear-gradient(to right, #00c6ff, #0072ff); /*background color */
+  display:none;
+  font-family: 'Dosis', sans-serif;
+  font-size:20px;
+
+}
+
+#fact2,#fact3 {
+  width: 100%;
+  height:12.5%;
+  padding: 5px 0;
+  text-align: center;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display:none;
+  font-family: 'Dosis', sans-serif;
+  font-size:20px;
+}
+
+.button {
+  width:100%;
+  height:5%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+.factA{
+  width:100%;
+  height:5%;
+  color:red;
+  background-image:url('comparison.jpg'); /* */
+}
+
+#home{
+  height:50%;
+  width:100%;
+  background: linear-gradient(to right, #00c6ff, #0072ff); /* */
+  opacity: 0.5; /* */
+  overflow:hidden; /* */
+  display:none; /* */
+  text-align:center;
+  font-family: 'Dosis', sans-serif;
+  font-size:60px;
+}
+
+#home:hover{
+opacity:1; /* */
+transition:2.3s; /* */
+}

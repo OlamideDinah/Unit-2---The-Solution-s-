@@ -1,0 +1,290 @@
+
+
+
+		p {
+			font-size: 50px;
+      text-align:center;
+      padding:150px;
+		}
+
+
+
+
+
+    /* This is to create a more pornounced effect for the 4 blocks
+     at the bottom of the page and to make the area before the button is clicked appear inviisble. */
+    body{
+      background-color:black;
+
+    }
+
+    /* */
+
+	
+
+	
+
+
+      .tl {
+        width:50%;
+        height:50%;
+        position:absolute;
+        z-index:-1;
+        top:210%;
+        left:0;
+         background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+        opacity: 0.5;
+        text-align:center;
+        font-family: 'Dosis', sans-serif;
+    
+
+      }
+
+ /* */
+
+    .tl:hover:not(.active) {
+
+    background: -webkit-linear-gradient(to right, #ffffff, #e65c00); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1a1905, #fffc00);
+    opacity:1;
+    transition: 2.3s;
+    transform:scale(1.03);
+} 
+
+
+ /* */
+      .bl {
+        width:50%;
+        height:50%;
+        position:absolute;
+        left:0;
+        top:260%;
+        background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff,#6dd5fa,#2980b9);
+        opacity: 0.5;
+        overflow:hidden;
+        font-family: 'Dosis', sans-serif;
+
+
+      }
+
+
+ /* */
+      .bl:hover:not(.active) {
+    opacity:1;
+  transition: 2.3s;
+  transform:scale(1.03);
+
+  }
+
+
+ /* */
+      .tr {
+        width:50%;
+        height:50%;
+        position:absolute;
+        z-index:-1;
+        top:210%;
+        right:0;
+        background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+        opacity: 0.5;
+        font-family: 'Dosis', sans-serif;
+      }
+
+ /* */
+      .tr:hover:not(.active) {
+    background: -webkit-linear-gradient(to right, #52c234, #061700); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #52c234, #061700);
+    opacity:1;
+    transition: 2.3s;
+    transform:scale(1.03);
+
+  }
+/*
+  Note to self - make all of them blue at the start - bottom two become more defined, top ones change to their
+  respective colours. */
+
+ /* To make more efficient. simply make the percentages form the bottom <_----------------------- too lazy to do rn ->- */
+      .br {
+        width:50%;
+        height:50%;
+        position:absolute;
+        right:0;
+        top:260%;
+        background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+        opacity: 0.5;
+        overflow:hidden;
+        font-family: 'Dosis', sans-serif;
+
+       }
+
+ /* */
+            .br:hover:not(.active) {
+    opacity:1;
+    transition: 2.3s;
+    transform:scale(1.03);
+      }
+
+
+ /* */
+      p {
+        color:black;
+      }
+
+
+
+
+
+
+ /* */
+body {
+  margin:0;
+}
+
+
+ /* */
+ul {
+  list-style-type: none;  /*No dots */
+  margin: 0; /* Right at the top */
+  padding: 0; /*no padding(no margin) */
+  overflow: hidden; /* if it goes off the page it wont show */
+  background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* the colour when not hoveered on */
+  position:sticky; /*It will always stay on top even when scrolling through the site */
+  top: 0; /* Right at the top */
+  z-index:2; /* Makes it appear infront of other elements */
+  border-radius:30px; /* Circular Navbar */
+  opacity:1;
+  font-family: 'Dosis', sans-serif;
+  
+}
+
+li {
+  float:left; /* The navbar will "float" from the left meaning it stars from the left*/
+}
+
+li a { /* this represents all the text positioning inside of the navbars*/
+  display: block; /* its a square/rectangle */
+  color: white; /* the text is white*/
+  text-align: center; /* the text is aligned in the center */
+  padding: 14px 90px; /* the space around the text - see css block model for reference*/
+  text-decoration: none; /* no dots before text */
+}
+
+li a:hover:not(.active){
+   background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  transition:1s;
+
+}
+
+
+ /* */
+  .parallax {
+  /* The image used */
+  background-image: url('indexbackground.jpg');
+
+   /* */
+  height: 100%; 
+
+   /* */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+ /* */
+#holder, #importance {
+  padding: 5px;
+  text-align: center;
+  background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #434343, #000000);
+  border: solid 1px #c3c3c3;
+}
+
+ /* */
+#importance  {
+  height:100%;
+  display:none; /* not displayed until jquery clals */
+  background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #000000, #434343, #000000);
+font-size:50px;
+font-color:-webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+  font-family: 'Dosis', sans-serif;
+}
+
+ /* for animation*/
+
+
+
+.text {
+
+Width:50px;
+Height:50px;
+background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+position:absolute;
+left:40%;
+top:30%;
+animation:tomiddle 3s;
+animation-fill-mode: forwards;
+border-radius:5%;
+padding:50;
+text-align:center;
+font-family: 'Dosis', sans-serif;
+font-size:30px;
+
+
+}
+
+ /* */
+
+.background {
+
+height:100px;
+width:200px;
+background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+position:absolute;
+top:50%;
+animation:tomiddle1 3s;
+animation-fill-mode: forwards;
+border-radius:5%;
+text-align:center;
+font-family: 'Dosis', sans-serif;
+font-size:30px;
+
+
+
+}
+
+ /* */
+
+@keyframes tomiddle {
+
+from {left :0%;}
+to   {left: 45.25%;}
+
+}
+
+ /* */
+
+@keyframes tomiddle1 {
+
+from {right :0%;}
+to   {right: 42.5%;}
+
+}
+
+
+
+
+
+
+

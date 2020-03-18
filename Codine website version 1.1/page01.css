@@ -1,0 +1,253 @@
+
+
+
+		p {
+			font-size: 50px;
+      text-align:center;
+      padding:150px;
+		}
+
+
+    /* This is to create a more pornounced effect for the 4 blocks
+     at the bottom of the page and to make the area before the button is clicked appear inviisble. */
+    body{
+      background-color:black;
+
+    }
+
+    /* */
+
+	
+
+	
+
+
+      .tl {
+        width:50%;
+        height:50%;
+        position:absolute;
+        z-index:-1;
+        top:200%;
+        left:0;
+         background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
+        opacity: 0.5;
+
+      }
+
+ /* */
+
+    .tl:hover:not(.active) {
+
+    background: -webkit-linear-gradient(to right, #ffffff, #e65c00); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffffff, #e65c00);
+    opacity:1;
+    transition: 2.3s;
+} 
+
+
+ /* */
+      .bl {
+        width:50%;
+        height:50%;
+        position:absolute;
+        left:0;
+        top:250%;
+        background: -webkit-linear-gradient(to right, #800080, #ffc0cb); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #800080, #ffc0cb);
+        opacity: 0.5;
+        overflow:hidden;
+      }
+
+
+ /* */
+      .bl:hover:not(.active) {
+    opacity:1;
+  transition: 2.3s;
+
+  }
+
+
+ /* */
+      .tr {
+        width:50%;
+        height:50%;
+        position:absolute;
+        z-index:-1;
+        top:200%;
+        right:0;
+        background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+        opacity: 0.5;
+      }
+
+ /* */
+      .tr:hover:not(.active) {
+    background: -webkit-linear-gradient(to right, #52c234, #061700); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #52c234, #061700);
+    opacity:1;
+    transition: 2.3s;
+
+  }
+
+ /* */
+      .br {
+        width:50%;
+        height:50%;
+        position:absolute;
+        right:0;
+        top:250%;
+        background: -webkit-linear-gradient(to right, #800080, #ffc0cb); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,#ffc0cb, #800080 );
+        opacity: 0.5;
+        overflow:hidden;
+
+       }
+
+ /* */
+            .br:hover:not(.active) {
+    opacity:1;
+    transition: 2.3s;
+      }
+
+
+ /* */
+      p {
+        color:red;
+      }
+
+
+
+
+
+
+ /* */
+body {
+  margin:0;
+}
+
+
+ /* */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position:sticky;
+  top: 0;
+  z-index:2;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 90px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+
+ /* */
+  .parallax {
+  /* The image used */
+  background-image: url('background.jpg');
+
+   /* */
+  height: 100%; 
+
+   /* */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+ /* */
+#holder, #importance {
+  padding: 5px;
+  text-align: center;
+  background: -webkit-linear-gradient(to right, #000000, #434343); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #434343);
+  border: solid 1px #c3c3c3;
+}
+
+ /* */
+#importance  {
+  height:100%;
+  display: none;
+  background-color:red;
+}
+
+ /* */
+
+.text {
+
+Width:50px;
+Height:50px;
+color:red;
+border:solid 1px red;
+position:absolute;
+left:40%;
+top:30%;
+animation:down 3s;
+animation-fill-mode: forwards;
+border-radius:5%;
+padding:50;
+
+}
+
+ /* */
+
+.background {
+
+height:100px;
+width:200px;
+background:blue;
+position:absolute;
+top:50%;
+animation:tomiddle 3s;
+animation-fill-mode: forwards;
+border-radius:5%;
+text-align:center;
+
+
+}
+
+ /* */
+
+@keyframes tomiddle {
+
+from {left :0%;}
+to   {left: 40%;}
+
+}
+
+ /* */
+
+@keyframes down {
+
+from {top :20%;}
+to   {top :37%;}
+
+}
+
+
+
+
+
+
+

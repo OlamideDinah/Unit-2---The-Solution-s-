@@ -1,0 +1,194 @@
+<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script> <!--chart.js bundle !-->
+
+<head>
+    <title> Welcome </title> <!-- the name of the tab in users screen !-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Heebo&display=swap" rel="stylesheet"> <!--  font ill be using !-->
+    <link rel="stylesheet" href="sdg7.2.css"> <!--  linking it to this files respective css file !-->
+    <script src="https://kit.fontawesome.com/cb55dcd543.js" crossorigin="anonymous"></script>  <!-- buttons and donate icon !-->
+</head>
+
+<body>
+
+    <ul> <!-- This block of code is for implementing my navbar !-->
+        <li><a href="file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/index3.html">Home</a></li> <!-- href is the link of the navbar button !-->
+        <li><a href="file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/comparsion.html">A Comparison</a></li>
+        <li><a href="file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/sdg15.2.html">SDG 15</a></li>
+        <li><a href="https://sustainabledevelopment.un.org/?menu=1300">The UN SDGs</a></li>
+        <li class="donate">
+            <a href="https://www.bcsea.org/civicrm/contribute/transact?id=2&reset=1"><img alt="" src="https://www.nicepng.com/png/full/247-2472145_profit-green-dollar-sign-icon.png" width="20.5" height="20.5"> </a>
+        </li>
+    </ul>
+
+    <div>
+        <div id="title"> <!-- showing the title image !-->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>Sdg 7
+            <br> Sustainable Energy Sources
+        </div>
+    </div>
+
+    <div>
+
+        <div class="tl"> <!-- top left of second page, has this video in it !-->
+
+            <iframe width="716px" height="390px" src="https://www.youtube.com/embed/PY5yWjID1m8">
+            </iframe>
+        </div>
+
+        <div class="flip-card"> <!-- bottom right has this flip card !-->
+            <div class="flip-card-inner">
+                <div class="flip-card-front"> <!-- what is showed before hovering !-->
+                    <br>
+                    <br> North America
+
+                </div>
+
+                <div class="flip-card-back"> <!-- when user hovers this is displayed!-->
+                    As you can see from the above graph, North America has a lot of work too do. How we treat our planet and what energies we use will effect not just us, but generations after.
+                    <br>
+                    <br>You can make a difference. Contact a government official, help your parents be conscious of their vote, anything you do will help.
+                    <br>
+                    <br>
+                    <br> You can also donate to places like Africa. Africa have made great strides in access to electricity and the use of clean energy - your donation could help even more.
+                </div>
+            </div>
+
+        </div>
+
+        <div class="chart-container"> <!-- chart container !-->
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <div class="br">
+        as you can see. north america ha s a lot of work too do.
+    </div>
+
+    <div class="bl">
+    </div>
+
+    <div class="carousel-container">  <!-- javascript explained below !-->
+        <i class="fas fa-arrow-left" id="prevBtn"></i> <!-- arrow icons !-->
+        <i class="fas fa-arrow-right" id="nextBtn"></i> <!-- arrow icons !-->
+        <div class="carousel-slide">
+            <img src="imageC.jpg" id="lastClone" alt=""> <!-- alt is for when image isn't displayed !-->
+            <img src="imageA.jpg" alt="">
+            <img src="imageB.jpg" alt="">
+            <img src="imageC.jpg" alt="">
+            <img src="imageA.jpg" id="firstClone" alt="">
+        </div>
+    </div>
+
+    <!-- move buttons !-->
+
+    <script>
+        /* js */
+
+  /* slide background and images*/
+        const carouselSlide = document.querySelector('.carousel-slide');
+        const carouselImages = document.querySelectorAll('.carousel-slide img');
+
+          /*next and previous buttons */
+        const prevBtn = document.querySelector('#prevBtn');
+        const nextBtn = document.querySelector('#nextBtn');
+
+        /* a counter to track which image should be shown */
+        let counter = 1;
+        const size = carouselImages[0].clientWidth;
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+
+          /* button listeners - when image transition finishes, counter is updated*/
+        nextBtn.addEventListener('click', () => { // onclick
+            if (counter >= carouselImages.length - 1) return;  // bug watch - you cant click to fast to glitch the slideshow
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter++; // if you go nextBtn the counter updates
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (counter <= 0) return; // bug watch - you cant click to fast to glitch the slideshow
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
+            counter--; // if you go previous the counter updates
+            carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+        });
+
+        carouselSlide.addEventListener('transitionend', () => {
+            if (carouselImages[counter].id === 'lastClone') { // no transition on last image - otherwise it looks really weird
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length - 2;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+            if (carouselImages[counter].id === 'firstClone') {  // no transition on first image before switch
+                carouselSlide.style.transition = "none";
+                counter = carouselImages.length - counter;
+                carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+            }
+
+        });
+    </script>
+
+    <div class="goal15" onclick="window.location='file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/sdg15.2.html';">
+        <br>
+        <br>SDG 15
+    </div>
+
+    <script>
+        //-------------------------------------------------------------------------------->
+        var ctx = document.getElementById('myChart'); /* chart.js module */
+
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Africa', 'North America', 'Asia', 'Oceania', 'Europe', 'South America'],
+                datasets: [{
+                    label: '% of Renewable Energy Sources Contribution to Energy Used(2016)',
+
+                    data: [55.63, 11, 16.26, 13.77, 13.52, 33.66],
+
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)', // 1st bar
+                        'rgba(54, 162, 235, 0.2)', // 2nd bar
+                        'rgba(255, 206, 86, 0.2)', // 3rd bar
+                        'rgba(75, 192, 192, 0.2)', // 4th bar
+                        'rgba(153, 102, 255, 0.2)', // 5th bar
+                        'rgba(255, 159, 64, 0.2)' // 6th bar
+                    ],
+
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+
+                    borderWidth: 1
+                }]
+            },
+
+            options: {
+                scales: {
+                    yAxes: [{
+                        display: true,
+                        ticks: {
+                            beginAtZero: true,
+                            steps: 10,
+                            stepValue: 5,
+                            max: 100
+                        }
+                    }]
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>

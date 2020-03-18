@@ -1,0 +1,121 @@
+<html>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js"></script> <!--  chart.js library !-->
+
+<head>
+    <title> Sdgs 7 and 15 </title> <!-- the name of the tab in users screen !-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Heebo&display=swap" rel="stylesheet"> <!--  font ill be using !-->
+    <link rel="stylesheet" href="comparison.css"> <!--  linking it to this files respective css file !-->
+</head>
+
+<body>
+
+    <ul> <!-- This block of code is for implementing my navbar !-->
+        <li><a href="file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/index3.html">Home</a></li> <!-- href is the link of the navbar button !-->
+        <li><a href="file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/sdg7.2.html">SDG 7</a></li>
+        <li class="right"><a href="file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/sdg15.2.html">SDG 15</a></li> <!-- the class right is for navbar buttons on the right side !-->
+        <li class="right"><a href="https://sustainabledevelopment.un.org/?menu=1300">The UN SDGs</a></li>
+    </ul>
+
+    <div class=parallax> <!-- Calling the parallax background feature !-->
+        <div class=textholder> <!-- page open screen animation block !-->
+            How They Relate
+        </div>
+    </div>
+
+    <button class="button" onclick="myFunction()">Click me! find out how</button> <!-- button to show the 5 reasons !-->
+
+    <div id="myDIV"> <!-- all of the 5 reasons buttons will be inside of this div that is opened by 'myfunction'!-->
+        <button class="factA" onclick="fact1()">Severity</button> <!-- button 1 / fact 1 !-->
+        <div id="fact1">
+            Both Sdgs 7 and 15 are extremely severe problems with the potential to reak havoc on our planet.If we don't start using sustainable Energy, we will soon see ourselves run out of things such as oil and coal. Since we're so dependant on these materials, many of us would lose power and we would likely see a worldwide crisis. To add to this, the use of unsustainable sources also has a horrible effect on our environment, evident by the recent outbreak of climate crisises. In this sense Sdg 15 is similar to Sdg7. If we keep chopping down trees and killing animals we will see a horrible change in our planet. Without trees taking C02 out of the atmosphere, we will undoubedtly plunge further into a Climate Crisis.
+        </div>
+        <button class="factA" onclick="fact2()">Cause</button>
+        <div id="fact2">
+            Both of these Sdgs are issues caused by humans. Frankly, if we weren't here they likely wouldn't be needed. Our dependance on Energy has caused us to use unsustainable sources, whereas our desires for equipments and tools such as paper have required us to destroy trees and animals worldwide.
+        </div>
+        <button class="factA" onclick="fact3()">How do they Relate?</button>
+        <div id="fact3">
+            As mentioned above, Sdgs 15 and 7 actually have a deep correlation. If we start using sustainable energy sources, our climate would improve thus improving life on land. Likewise, if we stopped chopping down trees, we would see less C02 in the environment, meaning the need for sustainable energy wouldn't be as dire. Understanding the link between Sdgs 7 and 15 is extremely important.
+        </div>
+        <button class="factA" onclick="fact4()">Why is this important?</button>
+        <div id="fact4">
+            If we understnad the relationship between Sdgs 15 and 7, we can develop a better approach at tackling both of them at once. For example, we could develop a detailed plan of action that would have targeted changes to help stop both goals. For example, providing electricity access to those in underdeveloped countries would improve their quality of life. And stopping the creation of huge oil drills and plants would leave a lot more green space on our planet.
+        </div>
+        <button class="factA" onclick="fact5()">How You Can Help</button>
+        <div id="fact5">
+            You can help further both Sdg7 and 15. For both goals, you can donate to organizations dedicated to the cause. You can also Contact local government officials and ask them what their plans for helping with both goals are. In both scenarios, everything helps and it's essantial that we send the message of the Sdgs to older generations.
+            <br> To summarize, here are 4 more ways you can help: a) Educate yourself and your others. b) Start fundraising campaigns. c) Promote volunteering. d) Use your connections to empower changemakers.
+        </div>
+
+    </div>
+
+    <div id="home" onclick="window.location='file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/index3.html';"> <!-- on the click of this div you go back to the homepage !-->
+        <br>
+        <br> Restart the Experience?
+    </div>
+
+    <script>
+        function myFunction() { /*  definining the function */
+            var x = document.getElementById("myDIV"); /* definiting variable */
+            if (x.style.display === "none") { /* if its not displayed (its not - css) */
+                x.style.display = "block"; /* it will be displayed */
+            } else { /* */
+                x.style.display = "none"; /* if it i already, it will be closed again */
+            }
+        }
+
+        function fact1() { <!-- !-->
+            var y = document.getElementById("fact1"); /*see above */
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+
+        function fact2() {
+            var y = document.getElementById("fact2");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+
+        function fact3() {
+            var y = document.getElementById("fact3");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+
+        function fact4() {
+            var y = document.getElementById("fact4");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+
+        function fact5() {
+            var y = document.getElementById("fact5"); /* defining variables */
+            var z = document.getElementById("home"); /* defining variables */
+            if (y.style.display === "none") { /* if the fact button isn't opened */
+                y.style.display = "block"; /* it will be */
+            } else {
+                y.style.display = "none"; /* if it is */
+                z.style.display = "inline-block"; /* then 'z' which is the restart button, is displayed*/
+            }
+        }
+    </script>
+
+    <div class="home"> Restart the Experience? </div> <!-- !-->
+
+    MAke a suvery for feedback that folks can fill out
+</body>
+
+</html>

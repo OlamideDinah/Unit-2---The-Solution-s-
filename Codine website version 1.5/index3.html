@@ -1,0 +1,58 @@
+<!DOCTY
+PE html>
+<html>
+
+<head>
+    <title> Sdgs 7 and 15</title> <!-- what the tab name is to the user !-->
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Heebo&display=swap" rel="stylesheet"> <!-- fonts used on the page !-->
+    <link rel="stylesheet" href="index3.css"> <!-- linking to its respective css file !-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--  jquery library !-->
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function() {
+            $("#holder").hover(function() { /* when the holder is hovered on  */
+                $("#importance").slideDown(800); /*the importance panel which is currently being controlled by "display :hidden; will slide down in 0.8 secs" */
+            });
+        });
+    </script>
+
+    <!-- This is the code for my navbar !-->
+    <ul>
+        <li><a href="https://sustainabledevelopment.un.org/?menu=1300">The Un Sdgs</a></li>
+    </ul>
+
+    <!-- Here I am calling the parralax effect! !-->
+
+    <div class="parallax"></div>
+    <div class=text>The UN</div> <!--  inside of it is the sliding animation!-->
+    <div class=background>
+        <br> SDGS </div>
+
+    <div id="holder"> >  < </div> <!-- holder bare that slides down !-->
+          <div id="importance">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>Why The Sdgs?
+              <br> Learn More Below - Pick A Section</div>
+
+            <!-- Calling the 4 quadrants I created !-->
+            <!--  onclick of this div you are taken to sdg 7!-->
+            <div class="tl" onclick="window.location='file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/sdg7.2.html';">
+
+                <p> > Sdg 7 < </p>
+
+            </div>
+            <!-- onclick of this div you are taken to sdg 15 !-->
+            <div class="tr" onclick="window.location='file:///Users/olamide.dinah/Desktop/Codine%20website%20version%201.5/sdg15.2.html';">
+
+                <p> > Sdg 15 < </p>
+            </div>
+
+</body>
+
+</html>
