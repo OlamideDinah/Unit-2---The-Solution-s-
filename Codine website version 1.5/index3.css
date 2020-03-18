@@ -1,16 +1,14 @@
-
-	p {
-	font-size: 50px;
-  text-align:center;
-  padding:150px;
-	color:black
-}
-
   body {
   background-color:black;
-	margin:0;
+  margin:0;
 }
 
+  p { /* all paragraphs */
+  font-size: 50px;
+  text-align:center;
+  padding:150px;
+  color:black
+}
 	ul {
 	list-style-type: none;  /*No dots */
 	margin: 0; /* Right at the top */
@@ -52,14 +50,25 @@
 	background-size: cover;
 }
 
- .text {
+
+@keyframes tomiddle { /* animation for title */
+	from {left :0%;}
+	to   {left: 45%;}
+	}
+	 /* animation for title */
+	@keyframes tomiddle1 {
+	from {right :0%;}
+	to   {right: 42.5%;}
+	}
+
+ .text { /*part of the tital animation */
   Width:200px;
  	Height:100px;
  	background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
  	position:absolute;
  	left:40%;
  	top:30%;
- 	animation:tomiddle 3s;
+ 	animation:tomiddle 3s; /* calling the animation  */
 	animation-fill-mode: forwards;
 	border-radius:5%;
 	padding:50;
@@ -67,50 +76,38 @@
 	font-family: 'Dosis', sans-serif;
 	font-size:30px;
 }
-	 /* */
+	 /* the background portion of the animation */
 	.background {
 	height:100px;
 	width:200px;
   background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
 	position:absolute;
 	top:50%;
-	animation:tomiddle1 3s;
+	animation:tomiddle1 3s; /* the animation */
 	animation-fill-mode: forwards;
 	border-radius:5%;
 	text-align:center;
 	font-family: 'Dosis', sans-serif;
 	font-size:30px;
 }
-
-	 /* */
-
-	@keyframes tomiddle {
-	from {left :0%;}
-	to   {left: 45%;}
-	}
-	 /* */
-	@keyframes tomiddle1 {
-	from {right :0%;}
-	to   {right: 42.5%;}
-	}
-	 /* */
-	#holder, #importance {
+	 /* slide down bar */
+	#holder, #importance { 
 	padding: 5px;
   text-align: center;
 	background: linear-gradient(to right, #000000, #434343, #000000);
 	border: solid 1px #c3c3c3;
 }
 
-	 /* */
+	 /* what is displayed when the slide down bar is hovered over */
 	#importance  {
 	height:100%;
-	display:none; /* not displayed until jquery clals */
+	display:none; /* not displayed until jquery calls the div */
 	font-size:50px;
 	background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
 	font-family: 'Dosis', sans-serif;
 }
 
-  .tl {
+  .tl { /* top left quadrant */
   width:50%;
   height:50%;
   position:absolute;
@@ -121,12 +118,12 @@
   opacity: 0.5;
   text-align:center;
   font-family: 'Dosis', sans-serif;
-  overflow:hidden;
+  overflow:hidden; /* any off page spillage won't show */
 }
 
- /* */
+ 
 
-  .tl:hover:not(.active) {
+.tl:hover:not(.active) { /* when its hovered over */
   background: linear-gradient(to right, #1a1905, #fffc00);
   opacity:1;
   transition: 2.3s;
@@ -134,9 +131,9 @@
 }
 
 
-  .tr {
+.tr { /* top right */
   width:50%;
-	height:50%;
+  height:50%;
   position:absolute;
   z-index:-1;
   top:210%;
@@ -148,19 +145,11 @@
   transition: background 2.3s, transform 2s, opacity 2.3s; /* setting the timing for things defined below */
 }
 
- /* */
-  .tr:hover:not(.active) {
+ /* top right when hovered*/
+.tr:hover:not(.active) {
   background: linear-gradient(to right, #52c234, #061700);
   opacity:1;
   transform:scale(1.03);
 }
 
- /* */
 
- /* */
-
- /* */
-
- /* */
-
- /* for animation*/
