@@ -80,7 +80,7 @@ li a:hover:not(.active){  /* setting the background color */
 }
 
  /*what happens when you hover over it */
-.tl:hover:not(.active) {
+ .tl:hover:not(.active) {
   opacity:1;
   transition: 2.3s;
 
@@ -194,7 +194,7 @@ li a:hover:not(.active){  /* setting the background color */
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  font-size:60px;
+  font-size: 4.55vmin;
 }
 
   /* Styling for front */
@@ -208,7 +208,7 @@ li a:hover:not(.active){  /* setting the background color */
   background:#f1f2b1;
   color: black;
   transform: rotateY(180deg);
-  font-size:25px;
+  font-size:3.55vmin;
   opacity:0.9;
 }
 /* chart.js */
