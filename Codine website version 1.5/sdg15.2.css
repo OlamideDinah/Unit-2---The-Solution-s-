@@ -1,239 +1,239 @@
-
-
 body {
-  background:black;
-  margin:0;
+	background: black;
+	margin: 0;
 }
- /*navbar */
+/*navbar */
+
 ul {
-  list-style-type: none;  /*No dots */
-  margin: 0; /* Right at the top */
-  padding: 0; /*no padding(no margin) */
-  overflow: hidden; /* if it goes off the page it wont show */
-  background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #1d976c, #93f9b9); /* the colour when not hoveered on */
-  position:sticky; /*It will always stay on top even when scrolling through the site */
-  top: 0; /* Right at the top */
-  z-index:2; /* Makes it appear infront of other elements */
-  border-radius:30px; /* Circular Navbar */
-  opacity:1;
-  font-family: 'Dosis', sans-serif;
+	list-style-type: none;/*No dots */
+	margin: 0;/* Right at the top */
+	padding: 0;/*no padding(no margin) */
+	overflow: hidden;/* if it goes off the page it wont show */
+	background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);/* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #1d976c, #93f9b9);/* the colour when not hoveered on */
+	position: sticky;/*It will always stay on top even when scrolling through the site */
+	top: 0;/* Right at the top */
+	z-index: 2;/* Makes it appear infront of other elements */
+	border-radius: 30px;/* Circular Navbar */
+	opacity: 1;
+	font-family: 'Dosis', sans-serif;
 }
-
 li {
-  float:left; /* The navbar will "float" from the left meaning it stars from the left*/
+	float: left;
+	/* The navbar will "float" from the left meaning it stars from the left*/
 }
-
-li a { /* this represents all the text positioning inside of the navbars*/
-  display: block; /* its a square/rectangle */
-  color:black; /* the text is white*/
-  text-align: center; /* the text is aligned in the center */
-  padding: 14px 90px; /* the space around the text - see css block model for reference*/
-  text-decoration: none; /* no dots before text */
-  top:0;
-
+li a {
+	/* this represents all the text positioning inside of the navbars*/
+	display: block;
+	/* its a square/rectangle */
+	color: black;
+	/* the text is white*/
+	text-align: center;
+	/* the text is aligned in the center */
+	padding: 14px 90px;
+	/* the space around the text - see css block model for reference*/
+	text-decoration: none;
+	/* no dots before text */
+	top: 0;
 }
-
-li a:hover:not(.active){ /* setting the background color */
-  background: linear-gradient(to right, #52c234, #061700);
+li a:hover:not(.active) {
+	/* setting the background color */
+	background: linear-gradient(to right, #52c234, #061700);
 }
-
-.donate { /* donate icon */
-  float:right;
-  opacity:1;
-  background:green;
+.donate {
+	/* donate icon */
+	float: right;
+	opacity: 1;
+	background: green;
 }
-
-
-@keyframes fadein { /* animation for the webpage to fade in */
-  from {opacity :0;}
-  to   {opacity :1;}
+@keyframes fadein {
+	/* animation for the webpage to fade in */
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
-
-#title  { /* the first page background */
-  position:absolute; /* exact positioning as defined */
-  top:0;
-  width:100%;
-  height:100%;
-  font-size:50px;
-  background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
-  animation:fadein 10s; /*takes 10 seconds to fully fade in */
-  font-family: 'Dosis', sans-serif;
-  text-align:center;
+#title {
+	/* the first page background */
+	position: absolute;
+	/* exact positioning as defined */
+	top: 0;
+	width: 100%;
+	height: 100%;
+	font-size: 50px;
+	background: linear-gradient(to right, #25c421, #ccf5cb, #ccffcc);
+	animation: fadein 10s;
+	/*takes 10 seconds to fully fade in */
+	font-family: 'Dosis', sans-serif;
+	text-align: center;
 }
-
 /* top left - one of four sections i use to position stuff in my website */
-  .tl {
-  width:50%;
-  height:50%;
-  position:absolute;
-  z-index:-1;
-  top:100%;
-  left:0;
-  background:red;
-  opacity: 0.5;
-  text-align:center;
-  font-family: 'Dosis', sans-serif;
+
+.tl {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	z-index: -1;
+	top: 100%;
+	left: 0;
+	background: red;
+	opacity: 0.5;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
 }
+/*what happens when you hover over it */
 
- /*what happens when you hover over it */
- .tl:hover:not(.active) {
-  opacity:1;
-  transition: 2.3s;
-
+.tl:hover:not(.active) {
+	opacity: 1;
+	transition: 2.3s;
 }
+/* top right */
 
- /* top right */
-  .tr {
-  width:50%;
-  height:50%;
-  position:absolute;
-  z-index:-1;
-  top:100%;
-  right:0;
-  background:green;
-  opacity: 0.5;
-  font-family: 'Dosis', sans-serif;
+.tr {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	z-index: -1;
+	top: 100%;
+	right: 0;
+	background: green;
+	opacity: 0.5;
+	font-family: 'Dosis', sans-serif;
 }
+/* when hovered*/
 
- /* when hovered*/
-  .tr:hover:not(.active) {
-  opacity:1;
-  transition: 2.3s;
-  transform:scale(1.03);
+.tr:hover:not(.active) {
+	opacity: 1;
+	transition: 2.3s;
+	transform: scale(1.03);
 }
-
-
-
-  .carousel-container { /* countainer for my image carousel */
-  width:50%;
-  height:50%;
-  left:0;
-  top:150%;
-  position:absolute;
-  overflow:hidden;
+.carousel-container {
+	/* countainer for my image carousel */
+	width: 50%;
+	height: 50%;
+	left: 0;
+	top: 150%;
+	position: absolute;
+	overflow: hidden;
 }
-
-  .carousel-slide { /*  image slideshow */
-  display:flex;
-  width:50%;
-  height:100%;
+.carousel-slide {
+	/*  image slideshow */
+	display: flex;
+	width: 50%;
+	height: 100%;
 }
-
-#prevBtn { /*previous button for slideshow */
-  top:50%;
-  left:0;
-  z-index:20;
-  position:absolute;
-  font-size:30px;
-  color:white;
-  cursor:pointer;
-  opacity:0.8;
+#prevBtn {
+	/*previous button for slideshow */
+	top: 50%;
+	left: 0;
+	z-index: 20;
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	opacity: 0.8;
 }
-
-  #nextBtn { /* next button for slideshow*/
-  top:50%;
-  right:0;
-  z-index:20;
-  position:absolute;
-  font-size:30px;
-  color:white;
-  cursor:pointer;
-  opacity:0.8;
+#nextBtn {
+	/* next button for slideshow*/
+	top: 50%;
+	right: 0;
+	z-index: 20;
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	opacity: 0.8;
 }
+/* The flip card container */
 
-
-
- /* The flip card container */
-   .flip-card {
-   background-color: transparent;
-   width: 50%;
-   height: 50%;
-   top:150%;
-   right:0;
-   position:absolute;
-   perspective: 1000px; /*  3D effect */
-   font-family: 'Dosis', sans-serif;
+.flip-card {
+	background-color: transparent;
+	width: 50%;
+	height: 50%;
+	top: 150%;
+	right: 0;
+	position: absolute;
+	perspective: 1000px;
+	/*  3D effect */
+	font-family: 'Dosis', sans-serif;
 }
+/*positioning the front and back side */
 
-  /*positioning the front and back side */
-   .flip-card-inner {
-   position: relative;
-   width: 100%;
-   height: 100%;
-   text-align: center;
-   transition: transform 0.8s;
-   transform-style: preserve-3d;
+.flip-card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
 }
+/* Do an horizontal flip when hovered*/
 
-  /* Do an horizontal flip when hovered*/
-   .flip-card:hover .flip-card-inner {
-   transform: rotateY(180deg);
-   transition:2s;
+.flip-card:hover .flip-card-inner {
+	transform: rotateY(180deg);
+	transition: 2s;
 }
+/* front and back side */
 
-  /* front and back side */
-   .flip-card-front, .flip-card-back {
-   position: absolute;
-   width: 100%;
-   height: 100%;
-   backface-visibility: hidden;
-   font-size:60px;
+.flip-card-front, .flip-card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	/* Safari */
+	backface-visibility: hidden;
+	font-size: 4.55vmin;
 }
+/* Styling for front */
 
-  /* Styling for front */
-   .flip-card-front {
-   background-color: #bbb;
-   color: black;
+.flip-card-front {
+	background-color: #bbb;
+	color: black;
 }
+/*  back side */
 
-  /*  back side */
-   .flip-card-back {
-   background-color: dodgerblue;
-   color: white;
-   font-size:27px;
-   transform: rotateY(180deg);
+.flip-card-back {
+	background-color: dodgerblue;
+	color: white;
+	font-size: 3.55vmin;
+	transform: rotateY(180deg);
 }
-
 /* chart.js */
 
-   .chart-container {
-   width:50%;
-   height:50%;
-   position:absolute;
-   right:0;
-   top:100%;
-   opacity: 0.9;
-   overflow:hidden;
-   background:yellow;
-   background:#ccffcc;
+.chart-container {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	opacity: 0.9;
+	overflow: hidden;
+	background: yellow;
+	background: #ccffcc;
 }
-
-
-   .chart-container:hover {
-   opacity:1;
-   transition:1s;
+.chart-container:hover {
+	opacity: 1;
+	transition: 1s;
 }
-
-
-
-
-
-  .goal15{ /* button div at the bottom of the page */
-  width:100%;
-  height:50%;
-  top:200%;
-  right:0;
-  position:absolute;
-  overflow:hidden;
-  font-family: 'Dosis', sans-serif;
-  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
-  opacity: 0.5;
-  transition: opacity 2.3s; /* setting the timing for things defined below */
-  font-size:60px;
-  text-align:center;
+.goal15 {
+	/* button div at the bottom of the page */
+	width: 100%;
+	height: 50%;
+	top: 200%;
+	right: 0;
+	position: absolute;
+	overflow: hidden;
+	font-family: 'Dosis', sans-serif;
+	background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+	opacity: 0.5;
+	transition: opacity 2.3s;
+	/* setting the timing for things defined below */
+	font-size: 60px;
+	text-align: center;
 }
-
-  .goal15:hover{ /* when hovered over */
-  opacity:1;
+.goal15:hover {
+	/* when hovered over */
+	opacity: 1;
 }
