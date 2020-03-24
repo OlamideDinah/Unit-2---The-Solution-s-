@@ -91,6 +91,7 @@ font-family: 'Dosis', sans-serif;
 font-size:30px;
 }
  /* slide down bar */
+
 #holder, #importance {
 padding: 5px;
 text-align: center;
@@ -107,12 +108,6 @@ background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
 font-family: 'Dosis', sans-serif;
 }
 
-.textbox {
-  height:auto;
-  width:auto;
-  margin:0 auto;
-}
-
 .tl { /* top left quadrant */
 width:50%;
 height:50%;
@@ -122,9 +117,12 @@ top:210%;
 left:0;
 background: linear-gradient(to right, #ffffff, #6dd5fa, #2980b9);
 opacity: 0.5;
-text-align:center;
 font-family: 'Dosis', sans-serif;
 overflow:hidden; /* any off page spillage won't show */
+display: flex; /* displayed as a flexbox so the webpage isn't distorted when shrunk*/
+justify-content: center; /* content will be centered  */
+align-items: center; /* content will be centered */
+font-size:40px;
 }
 
 
@@ -149,6 +147,10 @@ opacity: 0.5;
 font-family: 'Dosis', sans-serif;
 overflow:hidden;
 transition: background 2.3s, transform 2s, opacity 2.3s; /* setting the timing for things defined below */
+display: flex;  /* displayed as a flexbox so the webpage isn't distorted when shrunk*/
+justify-content: center; /*content will be centered */
+align-items: center; /*content will be centered */
+font-size:40px;
 }
 
 /* top right when hovered*/
